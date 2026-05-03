@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italy Trip - Rome & Tuscany Adventure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, #228B22 0%, #32CD32 100%);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .day-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-header .overnight {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .day-content {
+            padding: 2rem;
+        }
+
+        .time-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .time-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .time-label {
+            display: inline-block;
+            background: #8B4513;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .location {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .location:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .location h3 {
+            color: #8B4513;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .location-description {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .attractions {
+            margin-top: 1rem;
+        }
+
+        .attractions h4 {
+            color: #228B22;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .attractions ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .attractions li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .attractions li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #228B22;
+            font-weight: bold;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .day-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🇮🇹 Italy Adventure</h1>
+        <p>Rome & Tuscany - 6 Days of Italian Magic</p>
+    </div>
+
+    <div class="container">
+        <!-- Day 1 -->
+        <div class="day-card">
+            <div class="day-header">
+                <h2>Day 1: Rome to Montepulciano</h2>
+                <div class="overnight">Overnight: Montepulciano</div>
+            </div>
+            <div class="day-content">
+                <div class="time-section">
+                    <div class="time-label">Morning</div>
+                    <div class="location">
+                        <h3>Rome - Starting Point</h3>
+                        <div class="location-description">Pick up your rental car and begin your journey north through the Italian countryside.</div>
+                        <div class="attractions">
+                            <h4>Options to see before leaving Rome:</h4>
+                            <ul>
+                                <li>Quick visit to the Colosseum exterior</li>
+                                <li>Coffee at a traditional Roman café</li>
+                                <li>Stroll through Villa Borghese gardens</li>
+                                <li>Early morning at the Spanish Steps</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500" alt="Rome Colosseum">
+                            <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?w=500" alt="Roman streets">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Lunch Stop</div>
+                    <div class="location">
+                        <h3>Orvieto Cathedral (Duomo)</h3>
+                        <div class="location-description">A stunning Gothic masterpiece perched on a volcanic cliff, featuring incredible frescoes and a breathtaking facade.</div>
+                        <div class="attractions">
+                            <h4>Things to see in Orvieto:</h4>
+                            <ul>
+                                <li>Orvieto Cathedral - Gothic facade with golden mosaics</li>
+                                <li>St. Patrick's Well - 16th century engineering marvel</li>
+                                <li>Underground Orvieto - ancient Etruscan caves</li>
+                                <li>Torre del Moro - panoramic city views</li>
+                                <li>Local ceramics shops and trattorias</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=500" alt="Orvieto Cathedral">
+                            <img src="https://images.unsplash.com/photo-1598964658795-38e3c45c928a?w=500" alt="Orvieto town">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Evening</div>
+                    <div class="location">
+                        <h3>Montepulciano - Your Tuscan Base</h3>
+                        <div class="location-description">Arrive in this charming hilltop town famous for its Vino Nobile wine and Renaissance architecture.</div>
+                        <div class="attractions">
+                            <h4>Evening exploration options:</h4>
+                            <ul>
+                                <li>Walk along the main street (Corso) to Piazza Grande</li>
+                                <li>Visit Palazzo Comunale for sunset views</li>
+                                <li>Wine tasting at a local cantina</li>
+                                <li>Dinner at a traditional osteria</li>
+                                <li>Evening stroll through medieval alleys</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?w=500" alt="Montepulciano views">
+                            <img src="https://images.unsplash.com/photo-1566309139648-e1e4f0f8e7b8?w=500" alt="Tuscan vineyard sunset">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-card">
+            <div class="day-header">
+                <h2>Day 2: The Heart of Val d'Orcia</h2>
+                <div class="overnight">Overnight: Montepulciano</div>
+            </div>
+            <div class="day-content">
+                <div class="time-section">
+                    <div class="time-label">Morning</div>
+                    <div class="location">
+                        <h3>Pienza - The Renaissance Jewel</h3>
+                        <div class="location-description">A perfectly planned Renaissance town and UNESCO World Heritage site, famous for its pecorino cheese.</div>
+                        <div class="attractions">
+                            <h4>Must-see in Pienza:</h4>
+                            <ul>
+                                <li>Pienza Cathedral - Renaissance architecture masterpiece</li>
+                                <li>Palazzo Piccolomini with its hanging garden</li>
+                                <li>Corso Rossellino - the main street lined with cheese shops</li>
+                                <li>Pecorino cheese tasting at local producers</li>
+                                <li>Viewpoint overlooking Val d'Orcia valley</li>
+                                <li>Pieve di Corsignano - Romanesque church just outside town</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?w=500" alt="Pienza town">
+                            <img src="https://images.unsplash.com/photo-1569854210955-5a2e0985d4e6?w=500" alt="Val d'Orcia landscape">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Afternoon</div>
+                    <div class="location">
+                        <h3>Montalcino - Wine Capital</h3>
+                        <div class="location-description">Home to the legendary Brunello di Montalcino, one of Italy's finest wines.</div>
+                        <div class="attractions">
+                            <h4>Experiences in Montalcino:</h4>
+                            <ul>
+                                <li>Brunello wine tasting at renowned wineries</li>
+                                <li>Fortezza di Montalcino - medieval fortress with wine bar</li>
+                                <li>Panoramic views of the Tuscan countryside</li>
+                                <li>Abbey of Sant'Antimo - stunning Romanesque monastery nearby</li>
+                                <li>Walk the town walls and medieval streets</li>
+                                <li>Visit local enotecas for wine purchases</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500" alt="Montalcino fortress">
+                            <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=500" alt="Tuscan wine">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Evening</div>
+                    <div class="location">
+                        <h3>Sunset Dinner in Montepulciano</h3>
+                        <div class="location-description">Return to your base for a magical Tuscan sunset and dinner.</div>
+                        <div class="attractions">
+                            <h4>Evening activities:</h4>
+                            <ul>
+                                <li>Sunset aperitivo with valley views</li>
+                                <li>Dinner featuring Chianina beef</li>
+                                <li>Live music at local venues (seasonal)</li>
+                                <li>Night photography of the illuminated town</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500" alt="Italian dinner">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500" alt="Tuscan sunset">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-card">
+            <div class="day-header">
+                <h2>Day 3: Siena & Medieval Towers</h2>
+                <div class="overnight">Overnight: Montepulciano</div>
+            </div>
+            <div class="day-content">
+                <div class="time-section">
+                    <div class="time-label">Morning</div>
+                    <div class="location">
+                        <h3>Siena - Medieval Masterpiece</h3>
+                        <div class="location-description">Explore one of Italy's most beautiful medieval cities, famous for its shell-shaped Piazza del Campo.</div>
+                        <div class="attractions">
+                            <h4>Must-see attractions in Siena:</h4>
+                            <ul>
+                                <li>Piazza del Campo - the iconic shell-shaped square</li>
+                                <li>Torre del Mangia - climb 400 steps for spectacular views</li>
+                                <li>Siena Cathedral (Duomo) - black and white marble masterpiece</li>
+                                <li>Piccolomini Library - Renaissance frescoes</li>
+                                <li>Basilica of San Domenico</li>
+                                <li>Explore the medieval contrade neighborhoods</li>
+                                <li>Try panforte and ricciarelli (local sweets)</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1541429604366-90f5b89fbe3a?w=500" alt="Piazza del Campo Siena">
+                            <img src="https://images.unsplash.com/photo-1598463630870-3eedb6c04f1c?w=500" alt="Siena Cathedral">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Afternoon</div>
+                    <div class="location">
+                        <h3>San Gimignano - Manhattan of the Middle Ages</h3>
+                        <div class="location-description">Famous for its medieval towers that create a unique skyline, this UNESCO site is a step back in time.</div>
+                        <div class="attractions">
+                            <h4>Things to experience:</h4>
+                            <ul>
+                                <li>Climb Torre Grossa - the tallest tower (54m high)</li>
+                                <li>Piazza della Cisterna - beautiful triangular square</li>
+                                <li>Collegiate Church with 14th-century frescoes</li>
+                                <li>Gelateria Dondoli - award-winning gelato</li>
+                                <li>Medieval torture museum (if interested)</li>
+                                <li>Vernaccia wine tasting - local white wine</li>
+                                <li>Walk the city walls for panoramic views</li>
+                                <li>Shop for saffron products (local specialty)</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1549085290-a2b77c57c588?w=500" alt="San Gimignano towers">
+                            <img src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?w=500" alt="Tuscan countryside">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Evening</div>
+                    <div class="location">
+                        <h3>Final Tuscan Evening</h3>
+                        <div class="location-description">Return to Montepulciano for your last evening in the Tuscan hills.</div>
+                        <div class="attractions">
+                            <h4>Evening options:</h4>
+                            <ul>
+                                <li>Farewell dinner at a family-run trattoria</li>
+                                <li>Final wine tasting of Vino Nobile</li>
+                                <li>Moonlit walk through the town</li>
+                                <li>Purchase local products to take home</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1510679472796-28965ab5db5d?w=500" alt="Italian wine dinner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-card">
+            <div class="day-header">
+                <h2>Day 4: Return to Rome</h2>
+                <div class="overnight">Overnight: Rome</div>
+            </div>
+            <div class="day-content">
+                <div class="time-section">
+                    <div class="time-label">Morning</div>
+                    <div class="location">
+                        <h3>Final Tuscan Breakfast</h3>
+                        <div class="location-description">Check out from Montepulciano and enjoy one last Tuscan breakfast.</div>
+                        <div class="attractions">
+                            <h4>Before departure:</h4>
+                            <ul>
+                                <li>Traditional Italian breakfast with cappuccino</li>
+                                <li>Last-minute photo opportunities</li>
+                                <li>Quick morning market visit (if available)</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500" alt="Italian breakfast">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Afternoon</div>
+                    <div class="location">
+                        <h3>Drive to Rome</h3>
+                        <div class="location-description">Scenic 2.5-hour drive back to the Eternal City. Return your rental car.</div>
+                        <div class="attractions">
+                            <h4>Optional stops en route:</h4>
+                            <ul>
+                                <li>Viterbo - medieval papal city</li>
+                                <li>Lake Bolsena - volcanic lake with views</li>
+                                <li>Traditional roadside agriturismo for lunch</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1534540376-c2ab3be04e3e?w=500" alt="Italian countryside drive">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Evening</div>
+                    <div class="location">
+                        <h3>Sunset at the Colosseum</h3>
+                        <div class="location-description">Return to Rome and take a magical sunset walk around the ancient monuments.</div>
+                        <div class="attractions">
+                            <h4>Evening activities:</h4>
+                            <ul>
+                                <li>Colosseum exterior at golden hour</li>
+                                <li>Roman Forum illuminated at dusk</li>
+                                <li>Via dei Fori Imperiali walk</li>
+                                <li>Dinner in Monti neighborhood</li>
+                                <li>Gelato at Piazza Venezia</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500" alt="Colosseum sunset">
+                            <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=500" alt="Roman Forum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-card">
+            <div class="day-header">
+                <h2>Day 5: Ancient Rome & City Charm</h2>
+                <div class="overnight">Overnight: Rome</div>
+            </div>
+            <div class="day-content">
+                <div class="time-section">
+                    <div class="time-label">Morning</div>
+                    <div class="location">
+                        <h3>Roman Forum & Palatine Hill</h3>
+                        <div class="location-description">Walk through the heart of ancient Rome where emperors once ruled.</div>
+                        <div class="attractions">
+                            <h4>Ancient sites to explore:</h4>
+                            <ul>
+                                <li>Roman Forum - ancient city center ruins</li>
+                                <li>Palatine Hill - birthplace of Rome with imperial palace ruins</li>
+                                <li>Temple of Saturn and Vesta</li>
+                                <li>Arch of Titus and Constantine</li>
+                                <li>House of Augustus with original frescoes</li>
+                                <li>Panoramic terrace views over the Forum</li>
+                                <li>Circus Maximus (chariot racing venue)</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=500" alt="Roman Forum">
+                            <img src="https://images.unsplash.com/photo-1548585744-c643f6605a1b?w=500" alt="Palatine Hill">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Afternoon</div>
+                    <div class="location">
+                        <h3>Trastevere - The Charming Neighborhood</h3>
+                        <div class="location-description">Wander through narrow cobblestone streets in Rome's most authentic and bohemian neighborhood.</div>
+                        <div class="attractions">
+                            <h4>Trastevere highlights:</h4>
+                            <ul>
+                                <li>Santa Maria in Trastevere - stunning basilica with golden mosaics</li>
+                                <li>Explore winding medieval streets and hidden piazzas</li>
+                                <li>Lunch at a traditional Roman trattoria</li>
+                                <li>Orto Botanico - peaceful botanical gardens</li>
+                                <li>Villa Farnesina - Renaissance frescoes by Raphael</li>
+                                <li>Browse artisan shops and boutiques</li>
+                                <li>Janiculum Hill for panoramic city views</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1520090191648-79a6a6a48d00?w=500" alt="Trastevere streets">
+                            <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=500" alt="Rome colorful buildings">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Evening</div>
+                    <div class="location">
+                        <h3>Trevi Fountain Under the Stars</h3>
+                        <div class="location-description">Experience the magic of Rome's most famous fountain illuminated at night.</div>
+                        <div class="attractions">
+                            <h4>Evening route suggestions:</h4>
+                            <ul>
+                                <li>Trevi Fountain - toss a coin for good luck</li>
+                                <li>Pantheon at night - architectural marvel</li>
+                                <li>Piazza Navona - baroque square with street artists</li>
+                                <li>Campo de' Fiori area for dinner</li>
+                                <li>Gelato at Giolitti or Fatamorgana</li>
+                                <li>Evening stroll along Via del Corso</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?w=500" alt="Trevi Fountain night">
+                            <img src="https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=500" alt="Pantheon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-card">
+            <div class="day-header">
+                <h2>Day 6: Vatican & Departure</h2>
+                <div class="overnight">Departure Day</div>
+            </div>
+            <div class="day-content">
+                <div class="time-section">
+                    <div class="time-label">Morning</div>
+                    <div class="location">
+                        <h3>Vatican City</h3>
+                        <div class="location-description">Visit the world's smallest country and home to some of humanity's greatest artistic treasures.</div>
+                        <div class="attractions">
+                            <h4>Vatican must-sees (choose based on time):</h4>
+                            <ul>
+                                <li>St. Peter's Basilica - largest church in the world</li>
+                                <li>Climb St. Peter's Dome - 551 steps for incredible views</li>
+                                <li>Vatican Museums - vast collection of art and history</li>
+                                <li>Sistine Chapel - Michelangelo's masterpiece ceiling</li>
+                                <li>Raphael Rooms - Renaissance frescoes</li>
+                                <li>Vatican Gardens (book in advance)</li>
+                                <li>Castel Sant'Angelo nearby - fortress with rooftop views</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=500" alt="St Peter's Basilica">
+                            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500" alt="Vatican">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Afternoon</div>
+                    <div class="location">
+                        <h3>Final Italian Moments</h3>
+                        <div class="location-description">Savor the last hours in the Eternal City before departure.</div>
+                        <div class="attractions">
+                            <h4>Farewell activities:</h4>
+                            <ul>
+                                <li>Traditional Italian espresso at Sant'Eustachio</li>
+                                <li>Gelato from Giolitti or Gelateria del Teatro</li>
+                                <li>Last-minute souvenir shopping near Piazza di Spagna</li>
+                                <li>Quick visit to Piazza del Popolo</li>
+                                <li>Light lunch with pasta or pizza</li>
+                                <li>Take final photos of your favorite spots</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?w=500" alt="Italian espresso">
+                            <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=500" alt="Italian gelato">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-section">
+                    <div class="time-label">Evening</div>
+                    <div class="location">
+                        <h3>Fiumicino Airport</h3>
+                        <div class="location-description">Head to the airport for your departure, carrying memories of an unforgettable Italian journey.</div>
+                        <div class="attractions">
+                            <h4>Travel tips:</h4>
+                            <ul>
+                                <li>Allow 3 hours before international flight</li>
+                                <li>Leonardo Express train from Termini (32 minutes)</li>
+                                <li>Tax refund desk for VAT refunds if applicable</li>
+                                <li>Last Italian coffee at airport café</li>
+                            </ul>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500" alt="Airport departure">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Italy Trip Guide | Buon Viaggio! 🍝🍷</p>
+        <p>Created with love for an unforgettable journey through Rome and Tuscany</p>
+    </div>
+</body>
+</html>
