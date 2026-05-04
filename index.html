@@ -106,6 +106,10 @@
             margin-top: 0.5rem;
         }
         
+        .bookend-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
         .time-section {
             padding: 2rem;
             border-bottom: 1px solid #eee;
@@ -197,6 +201,14 @@
             margin-top: 4rem;
         }
         
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
         .icon-badge {
             display: inline-flex;
             align-items: center;
@@ -206,8 +218,7 @@
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
+            line-height: 1.2;
         }
         
         .day-image {
@@ -243,16 +254,47 @@
     <div class="hero">
         <div class="container">
             <h1><i class="bi bi-geo-alt-fill"></i> Renee and Daniel Exploring Tuscany</h1>
-            <p class="subtitle">Rome & Tuscany - 6 Days of Italian Magic</p>
-            <div class="mt-4">
-                <span class="icon-badge"><i class="bi bi-calendar-check"></i> 6 Days</span>
+            <p class="subtitle">June 7–14, 2026 · Rome & Tuscany · 8 days of Italian magic</p>
+            <div class="mt-4 hero-badges">
+                <span class="icon-badge"><i class="bi bi-calendar-check"></i> 8 days · Jun 7–14</span>
                 <span class="icon-badge"><i class="bi bi-pin-map"></i> 10+ Cities</span>
-                <span class="icon-badge"><i class="bi bi-ice-cream"></i> Endless Gelato ðŸ¦</span>
+                <span class="icon-badge"><i class="bi bi-ice-cream"></i> Endless Gelato &#x1F366;</span>
             </div>
         </div>
     </div>
 
     <div class="container">
+        <!-- Arrival: fly into Rome -->
+        <div class="card day-card">
+            <div class="day-header bookend-header">
+                <div class="day-number">Arrival</div>
+                <h2>Flying into Rome</h2>
+                <div class="overnight-badge">
+                    <i class="bi bi-airplane-engines"></i> Rome airports (FCO / CIA)
+                </div>
+            </div>
+            
+            <div class="time-section">
+                <span class="time-badge"><i class="bi bi-airplane"></i> Touchdown in Italy</span>
+                
+                <div class="location-card">
+                    <h3><i class="bi bi-geo-alt-fill"></i> Welcome to the Eternal City</h3>
+                    <p class="description">We land in Rome and settle in before the Tuscany loop begins. Use this evening to shake off the flight, enjoy your first Roman meal, and rest up for Day 1.</p>
+                    
+                    <div class="attractions">
+                        <h4>Arrival checklist:</h4>
+                        <ul>
+                            <li><strong>Airports:</strong> Fiumicino (FCO) is the main hub; Ciampino (CIA) serves many budget carriers</li>
+                            <li>Leonardo Express train from FCO to Termini (~32 min) or pre-booked car service</li>
+                            <li>Check into your Rome hotel and drop bags</li>
+                            <li>Easy walk nearby for espresso, pizza al taglio, or gelato</li>
+                            <li>Early night if you plan an early start for the drive to Tuscany</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Day 1 -->
         <div class="card day-card">
             <div class="day-header">
@@ -704,6 +746,37 @@
                             <li>Leonardo Express train from Termini (32 minutes)</li>
                             <li>Tax refund desk for VAT refunds if applicable</li>
                             <li>Last Italian coffee at airport café</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Departure: fly out from Rome -->
+        <div class="card day-card">
+            <div class="day-header bookend-header">
+                <div class="day-number">Homeward</div>
+                <h2>Flying out from Rome</h2>
+                <div class="overnight-badge">
+                    <i class="bi bi-airplane"></i> Departing Rome (FCO / CIA)
+                </div>
+            </div>
+            
+            <div class="time-section">
+                <span class="time-badge"><i class="bi bi-airplane-fill"></i> Until next time, Italia</span>
+                
+                <div class="location-card">
+                    <h3><i class="bi bi-suitcase-lg"></i> Wheels up from Rome</h3>
+                    <p class="description">After Day 6 in the city and at the airport, our flights home leave from Rome. Same gateways we arrived through—just with fuller hearts and heavier suitcases.</p>
+                    
+                    <div class="attractions">
+                        <h4>Departure reminders:</h4>
+                        <ul>
+                            <li>Double-check flight time, terminal, and airline baggage rules</li>
+                            <li>Reach FCO or CIA with plenty of buffer (especially for international flights)</li>
+                            <li>Leonardo Express or taxi from central Rome to FCO—plan around rush hour</li>
+                            <li>VAT refund paperwork, if you shopped tax-free</li>
+                            <li>One last <em>caffè</em> before boarding—then start dreaming of the next trip</li>
                         </ul>
                     </div>
                 </div>
